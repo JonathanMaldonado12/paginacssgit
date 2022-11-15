@@ -20,10 +20,6 @@ h3{
     font-size: 2em;   
 }
 
-ul{
-    list-style: none;
-}
-
 button{
     font-size: 25px;
     font-weight: bold;
@@ -53,7 +49,8 @@ header .logo{
     padding: 25px 30px;
     font-weight: bold;
     color: black;
-    font-size: 26px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header .container{
@@ -74,11 +71,42 @@ header a{
     text-decoration: none;
     font-weight: bold;
     color: black;
-
+    font-family: 'Lora', serif;
 }
 
-header a:hover{
-    color: rgb(195, 69, 69);
+ul{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.list-item{
+    display: inline-block;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.link::after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: cadetblue;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+.link:hover::after{
+    width: 100%;
+    right: 0;
 }
 
 #portada-principal{
@@ -102,14 +130,14 @@ header a:hover{
 }
 
 #tarjetas {
-    background-color: gray;
+    background-color:rgb(30,30,30);
     color: white;
     text-align: center;
     padding: 10px;
 }
 
 #tarjetas .container{
-    padding: 120px 12px;
+    padding: 100px 10px;
 }
 
 #tarjetas p{
@@ -117,7 +145,8 @@ header a:hover{
 }
 
 #tarjetas h2{
-    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 #tarjetas .carta-1{
@@ -127,6 +156,11 @@ header a:hover{
         rgba(0,0,0,0.5)
         ),
     url("img/musica.jpg");
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
 }
 
 #tarjetas .carta-2{
@@ -136,6 +170,11 @@ header a:hover{
         rgba(0,0,0,0.5)
         ),
     url("img/ambiente.jpg");
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
 }
 
 #tarjetas .carta-3{
@@ -145,6 +184,11 @@ header a:hover{
         rgba(0,0,0,0.5)
         ),
     url("img/mar.jpg");
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
 }
 
 #tarjetas .carta-4{
@@ -154,8 +198,29 @@ header a:hover{
         rgba(0,0,0,0.5)
         ),
     url("img/cocteles.jpg");
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
 }
 
+footer{
+    background-color: rgb(230,230,230);
+
+}
+
+footer p{
+    margin: 0;
+    color: rgb (100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 
 @media (min-width: 720px){
     header .container{
@@ -164,5 +229,46 @@ header a:hover{
     }
     header nav{
         align-items: center;
+        padding-bottom: 0px;
+        padding-right: 30px;
+    }
+
+    #tarjetas .cards{
+        display: flex;
+        justify-content: center;
+    }
+
+    #tarjetas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #tarjetas h3{
+        margin-top: 0;
+    }
+
+    #tarjetas .carta-1{
+        padding: 50px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    #tarjetas .carta-2{
+        padding: 50px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    #tarjetas .carta-3{
+        padding: 50px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    #tarjetas .carta-4{
+        padding: 50px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .container-redes{
+        margin: 5px;
     }
 }
+
