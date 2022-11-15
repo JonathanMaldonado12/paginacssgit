@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+}
+
+.titulo{
+    font-size: 20px;
+    display: table-row;
+}
+
+.img-container{
+    background-image: url("img/menu1.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 500px;
+}
+
+.img-container2{
+    background-image: url("img/menu2.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 500px;
+}
+
+.texto{
+    width: 50%;
+    text-align: initial;
+    padding: 0px 30px;
+    justify-content: center;
+}   
